@@ -7,7 +7,14 @@
   ],
   "plugins": ["react", "prettier"],
   "rules": {
-    "prettier/prettier": ["error", { "singleQuote": "true" }],
+    "react/function-component-definition": [
+      "enabled",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "prettier/prettier": ["error", { "singleQuote": true }],
     "no-unused-vars": "warn",
     "no-console": "warn",
     "func-names": "off",
