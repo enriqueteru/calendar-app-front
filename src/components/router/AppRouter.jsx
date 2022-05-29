@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import Login from '../auth/LoginScreen';
 import CalendarScreen from '../calendar/CalendarScreen';
-import NotFound from '../ui/notFound';
+import NotFound from '../ui/NotFound';
 
 const AppRouter = () => {
   return (
