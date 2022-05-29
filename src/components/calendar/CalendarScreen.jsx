@@ -8,6 +8,7 @@ import cms from 'helpers/calendar-messages-custom';
 import Navbar from '../ui/Navbar';
 import CalendarEvent from './CalendarEvent';
 import 'react-big-calendar/lib/sass/styles.scss';
+import CalendarModal from './CalendarModal';
 
 moment.locale('es');
 const localizer = momentLocalizer(moment);
@@ -24,7 +25,7 @@ const event = [
 ];
 const CalendarScreen = () => {
   const [lastView, setLastView] = useState(
-    localStorage.getItem('lastView' || 'month')
+    localStorage.getItem('lastView' || 'day')
   );
   const onDobleClick = (e) => {
     // eslint-disable-next-line no-console
@@ -67,6 +68,7 @@ const CalendarScreen = () => {
           event: CalendarEvent,
         }}
       />
+      <CalendarModal />
     </div>
   );
 };
